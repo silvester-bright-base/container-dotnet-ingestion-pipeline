@@ -8,3 +8,4 @@ RUN apt-get install --yes ca-certificates curl apt-transport-https lsb-release g
 
 #Install the Azure CLI
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+
