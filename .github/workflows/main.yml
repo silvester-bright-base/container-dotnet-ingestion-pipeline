@@ -37,5 +37,5 @@ jobs:
         push: true 
         file: Dockerfile
         tags: |
-          pipelineimages.azurecr.io/dotnet-ingestion-pipeline:${{ steps.set-tag.outputs.tag }}
-          pipelineimages.azurecr.io/dotnet-ingestion-pipeline:latest
+          pipelineimages.azurecr.io/utilities/dotnet-ingestion-pipeline:${{ steps.set-tag.outputs.tag }}
+          pipelineimages.azurecr.io/utilities/dotnet-ingestion-pipeline:latest
