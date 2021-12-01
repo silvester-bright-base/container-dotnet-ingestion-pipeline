@@ -6,11 +6,9 @@ on:
       - '*.*.*'
 
 jobs:
- 
   publish-docker-image:
     runs-on: ubuntu-latest
     steps:
-    
     - name: Set - Tag
       id: set-tag
       run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
