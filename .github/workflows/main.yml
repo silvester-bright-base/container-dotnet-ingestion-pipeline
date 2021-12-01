@@ -23,7 +23,7 @@ jobs:
     - name: DOCKER - Setup QEMU
       uses: docker/setup-qemu-action@v1
 
-    - name: DOCKER - Setup BuildX
+    - name: DOCKER - Setup BuildX 
       uses: docker/setup-buildx-action@v1
       
     - name: DOCKER - Build and Push
