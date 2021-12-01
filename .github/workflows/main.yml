@@ -14,6 +14,9 @@ jobs:
       id: set-tag
       run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
 
+    - name: Check out the repo
+      uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+      
     - name: DOCKER - Login
       uses: docker/login-action@v1
       with:
@@ -32,6 +35,7 @@ jobs:
       with:
         context: .
         push: true 
+        file: Dockerfile
         tags: |
           pipelineimages.azurecr.io/dotnet-ingestion-pipeline:${{ steps.set-tag.outputs.tag }}
           pipelineimages.azurecr.io/dotnet-ingestion-pipeline:latest
